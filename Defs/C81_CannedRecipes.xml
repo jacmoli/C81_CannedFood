@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+<!-- 
+
+- Cambiare tavolo (cooking)
+- Aggiungere "1x can" agli ingredienti
+
+- Fare x1 / x4 preserved
+
+- Fare tutto per vegs
+
+- Fare ricetta per lattina e per lattina conservante
+
+- ingredient value getter class -- nutrition. e con steel?
+
+-->
+
+	<RecipeDef Name="C81_MakeAllCans" Abstract="True"> 								<!-- Common to all can-making -->
+		<jobString>Making cans.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="C81_MakeAllCans">    									<!-- Make 5 standard cans -->
+		<defName>C81_MakeStdCanX5</defName>
+		<label>Make 5 standard cans</label>
+		<description>Make 5 standard steel cans.</description>
+		<workAmount>200</workAmount>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		
+		<products>
+			<C81_StdCan>5</C81_StdCan>
+		</products>
+		
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+	<RecipeDef ParentName="C81_MakeAllCans">    									<!-- Make 20 standard cans -->
+		<defName>C81_MakeStdCanX20</defName>
+		<label>Make 20 standard cans</label>
+		<description>Make 20 standard steel cans.</description>
+		<workAmount>800</workAmount>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		
+		<products>
+			<C81_StdCan>20</C81_StdCan>
+		</products>
+		
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+	</RecipeDef>	
+	
+	<RecipeDef ParentName="C81_MakeAllCans">    									<!-- Make 5 advanced cans -->
+		<defName>C81_MakeAdvCanX5</defName>
+		<label>Make 5 preserving cans</label>
+		<description>Make 5 preserving steel cans.</description>
+		<workAmount>200</workAmount>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>PsychoidLeaves</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>PsychoidLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		
+		<products>
+			<C81_AdvCan>5</C81_AdvCan>
+		</products>
+		
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+	</RecipeDef>	
+	
+	<RecipeDef ParentName="C81_MakeAllCans">    									<!-- Make 20 advanced cans -->
+		<defName>C81_MakeAdvCanX20</defName>
+		<label>Make 20 preserving cans</label>
+		<description>Make 20 preserving steel cans.</description>
+		<workAmount>800</workAmount>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>PsychoidLeaves</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>PsychoidLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		
+		<products>
+			<C81_AdvCan>20</C81_AdvCan>
+		</products>
+		
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+	</RecipeDef>	
+	
+
+	<RecipeDef Name="C81_CanningAll" Abstract="True"> 								<!-- Common to all food canning -->
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+
+		<workSkill>Cooking</workSkill>
+			
+		<recipeUsers>
+			<li>TableButcher</li>
+		</recipeUsers>		
+	</RecipeDef>
+
+
+
+
+	
+	<RecipeDef ParentName="C81_CanningAll"> 											<!-- Canned meat x1 -->
+		<defName>CannedMeatX1</defName>
+		<label>Can meat</label>
+		<description>Clean the meat and store the good parts to cook it later.</description>
+		<jobString>Canning meat.</jobString>
+		<workAmount>250</workAmount>
+		
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			
+			<thingDefs>
+				<li>C81_StdCan</li>
+			</thingDefs>
+			
+			<disallowedThingDefs>
+				<li>C81_CannedMeatRaw</li>
+				<li>C81_PreservedMeatRaw</li>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDef>
+						<li>C81_StdCan</li>
+					</thingDef>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		
+		<products>
+			<C81_CannedMeatRaw>1</C81_CannedMeatRaw>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="C81_CanningM"> 											<!-- Canned meat x4 -->
+		<defName>CannedMeatX4</defName>
+		<label>Can meat x4</label>
+		<description>Clean the meat and store the good parts to cook it later.</description>
+
+		<workAmount>1000</workAmount>
+
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>1.00</count>
+			</li>
+		</ingredients>
+		
+		<products>
+			<C81_CannedMeatRaw>4</C81_CannedMeatRaw>
+		</products>
+	</RecipeDef>	
+	
+	
+	
+	
+
+  
+  
+  
+  
+  
+</Defs>  
