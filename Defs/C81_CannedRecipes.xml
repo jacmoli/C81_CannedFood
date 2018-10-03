@@ -15,7 +15,8 @@
 
 -->
 
-	<RecipeDef Name="C81_MakeAllCans" Abstract="True"> 								<!-- Common to all can-making -->
+<!-- Common to all can-making -->
+	<RecipeDef Name="C81_MakeAllCans" Abstract="True">
 		<jobString>Making cans.</jobString>
 		<workSpeedStat>SmithingSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
@@ -23,7 +24,8 @@
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
 	
-	<RecipeDef ParentName="C81_MakeAllCans">    									<!-- Make 5 standard cans -->
+<!-- Make 5 standard cans -->	
+	<RecipeDef ParentName="C81_MakeAllCans">
 		<defName>C81_MakeStdCanX5</defName>
 		<label>Make 5 standard cans</label>
 		<description>Make 5 standard steel cans.</description>
@@ -55,7 +57,8 @@
 		</skillRequirements>
 	</RecipeDef>
 
-	<RecipeDef ParentName="C81_MakeAllCans">    									<!-- Make 20 standard cans -->
+<!-- Make 20 standard cans -->
+	<RecipeDef ParentName="C81_MakeAllCans">
 		<defName>C81_MakeStdCanX20</defName>
 		<label>Make 20 standard cans</label>
 		<description>Make 20 standard steel cans.</description>
@@ -87,7 +90,8 @@
 		</skillRequirements>
 	</RecipeDef>	
 	
-	<RecipeDef ParentName="C81_MakeAllCans">    									<!-- Make 5 advanced cans -->
+<!-- Make 5 advanced cans -->
+	<RecipeDef ParentName="C81_MakeAllCans">
 		<defName>C81_MakeAdvCanX5</defName>
 		<label>Make 5 preserving cans</label>
 		<description>Make 5 preserving steel cans.</description>
@@ -128,7 +132,8 @@
 		</skillRequirements>
 	</RecipeDef>	
 	
-	<RecipeDef ParentName="C81_MakeAllCans">    									<!-- Make 20 advanced cans -->
+<!-- Make 20 advanced cans -->
+	<RecipeDef ParentName="C81_MakeAllCans">
 		<defName>C81_MakeAdvCanX20</defName>
 		<label>Make 20 preserving cans</label>
 		<description>Make 20 preserving steel cans.</description>
@@ -170,7 +175,9 @@
 	</RecipeDef>	
 	
 
-	<RecipeDef Name="C81_CanningAll" Abstract="True"> 								<!-- Common to all food canning -->
+	
+<!-- Common to all food canning -->	
+	<RecipeDef Name="C81_CanningAll" Abstract="True">
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
 		<effectWorking>Cook</effectWorking>
@@ -186,10 +193,9 @@
 	</RecipeDef>
 
 
-
-
 	
-	<RecipeDef ParentName="C81_CanningAll"> 											<!-- Canned meat x1 -->
+<!-- Canned meat x1 -->	
+	<RecipeDef ParentName="C81_CanningAll">
 		<defName>CannedMeatX1</defName>
 		<label>Can meat</label>
 		<description>Clean the meat and store the good parts to cook it later.</description>
@@ -237,7 +243,8 @@
 		</products>
 	</RecipeDef>
 
-	<RecipeDef ParentName="C81_CanningM"> 											<!-- Canned meat x4 -->
+<!-- Canned meat x4 -->	
+	<RecipeDef ParentName="C81_CanningM">
 		<defName>CannedMeatX4</defName>
 		<label>Can meat x4</label>
 		<description>Clean the meat and store the good parts to cook it later.</description>
