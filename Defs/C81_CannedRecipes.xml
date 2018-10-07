@@ -3,7 +3,7 @@
 <!-- 
 
 - Cambiare tavolo (cooking)
-- Aggiungere "1x can" agli ingredienti
+
 
 - Fare x1 / x4 preserved
 
@@ -11,7 +11,7 @@
 
 - Fare ricetta per lattina e per lattina conservante
 
-- ingredient value getter class -- nutrition. e con steel?
+
 
 -->
 
@@ -22,14 +22,18 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
 		<workSkill>Crafting</workSkill>
+		<recipeUsers>
+			<li>TableMachining</li>
+		</recipeUsers>
+		<researchPrerequisite>C81_CanningTech</researchPrerequisite>
 	</RecipeDef>
 	
-<!-- Make 5 standard cans -->	
+<!-- Make 5 standard can batches, 1 steel, craft 6 -->	
 	<RecipeDef ParentName="C81_MakeAllCans">
 		<defName>C81_MakeStdCanX5</defName>
 		<label>Make 5 standard cans</label>
-		<description>Make 5 standard steel cans.</description>
-		<workAmount>200</workAmount>
+		<description>Make 5 standard steel can batches.</description>
+		<workAmount>20</workAmount>
 		
 		<ingredients>
 			<li>
@@ -57,12 +61,12 @@
 		</skillRequirements>
 	</RecipeDef>
 
-<!-- Make 20 standard cans -->
+<!-- Make 20 standard can batches, 4 steel, craft 8 -->
 	<RecipeDef ParentName="C81_MakeAllCans">
 		<defName>C81_MakeStdCanX20</defName>
 		<label>Make 20 standard cans</label>
-		<description>Make 20 standard steel cans.</description>
-		<workAmount>800</workAmount>
+		<description>Make 20 standard steel can batches.</description>
+		<workAmount>80</workAmount>
 		
 		<ingredients>
 			<li>
@@ -90,12 +94,12 @@
 		</skillRequirements>
 	</RecipeDef>	
 	
-<!-- Make 5 advanced cans -->
+<!-- Make 5 advanced can batches, 1 steel 1 psycho leaf, craft 8 -->
 	<RecipeDef ParentName="C81_MakeAllCans">
 		<defName>C81_MakeAdvCanX5</defName>
 		<label>Make 5 preserving cans</label>
-		<description>Make 5 preserving steel cans.</description>
-		<workAmount>200</workAmount>
+		<description>Make 5 preserving steel can batches.</description>
+		<workAmount>30</workAmount>
 		
 		<ingredients>
 			<li>
@@ -132,12 +136,12 @@
 		</skillRequirements>
 	</RecipeDef>	
 	
-<!-- Make 20 advanced cans -->
+<!-- Make 20 advanced can batches, 4 steel 4 psycho leaves, craft 10 -->
 	<RecipeDef ParentName="C81_MakeAllCans">
 		<defName>C81_MakeAdvCanX20</defName>
 		<label>Make 20 preserving cans</label>
-		<description>Make 20 preserving steel cans.</description>
-		<workAmount>800</workAmount>
+		<description>Make 20 preserving steel can batches.</description>
+		<workAmount>120</workAmount>
 		
 		<ingredients>
 			<li>
@@ -188,7 +192,8 @@
 		<workSkill>Cooking</workSkill>
 			
 		<recipeUsers>
-			<li>TableButcher</li>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
 		</recipeUsers>		
 	</RecipeDef>
 
@@ -196,11 +201,11 @@
 	
 <!-- Canned meat x1 -->	
 	<RecipeDef ParentName="C81_CanningAll">
-		<defName>CannedMeatX1</defName>
+		<defName>C81_CanMeatX1</defName>
 		<label>Can meat</label>
 		<description>Clean the meat and store the good parts to cook it later.</description>
 		<jobString>Canning meat.</jobString>
-		<workAmount>250</workAmount>
+		<workAmount>15</workAmount>
 		
 		<fixedIngredientFilter>
 			<categories>
@@ -245,11 +250,11 @@
 
 <!-- Canned meat x4 -->	
 	<RecipeDef ParentName="C81_CanningM">
-		<defName>CannedMeatX4</defName>
+		<defName>C81_CanMeatX4</defName>
 		<label>Can meat x4</label>
 		<description>Clean the meat and store the good parts to cook it later.</description>
 
-		<workAmount>1000</workAmount>
+		<workAmount>60</workAmount>
 
 		<ingredients>
 			<li>

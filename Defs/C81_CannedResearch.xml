@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>C81_CanningTech</defName>
+		<label>Food canning</label>
+		<description>Store food in cans for longer preservation and storage efficiency</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>PackagedSurvivalMeal</li>
+		</prerequisites>
+		<researchViewX>8</researchViewX>
+		<researchViewY>1.16</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>
