@@ -56,7 +56,7 @@ Bilanciare consumi
 	</ThingDef>
 
 	<ThingDef Name="C81_AdvCan" ParentName="C81_Cans">
-		<defName>C81_StdCan</defName>
+		<defName>C81_AdvCan</defName>
 		<label>Advanced steel can</label>
 		<description>An empty steel can ready to store and long-term preserve ingredients.</description>
     
@@ -139,7 +139,7 @@ Bilanciare consumi
 
 <!-- Canned food items (name, desc, value, rotting time, graphics) -->	
 	<ThingDef Name="C81_CannedMeatRaw" ParentName="C81_CannedMeatBase">
-		<defName>CannedMeatRaw</defName>
+		<defName>C81_CannedMeatRaw</defName>
 		<label>Canned meat</label>
 		<description>A steel can containing meat chops for cooking.</description>
     
@@ -160,7 +160,7 @@ Bilanciare consumi
 	</ThingDef>
 
 	<ThingDef Name="C81_CannedVegsRaw" ParentName="C81_CannedVegsBase">
-		<defName>CannedVegsRaw</defName>
+		<defName>C81_CannedVegsRaw</defName>
 		<label>Canned vegetables</label>
 		<description>A steel can containing dried vegetables for cooking.</description>
     
@@ -182,7 +182,7 @@ Bilanciare consumi
 
 	
 	<ThingDef Name="C81_PreservedMeatRaw" ParentName="C81_CannedMeatBase">
-		<defName>PresMeatRaw</defName>
+		<defName>C81_PreservedMeatRaw</defName>
 		<label>Preserved meat</label>
 		<description>A steel can containing meat chops for cooking, seasoned for longer preservation.</description>
     
@@ -197,7 +197,7 @@ Bilanciare consumi
 	</ThingDef>
 
 	<ThingDef Name="C81_PreservedVegsRaw" ParentName="C81_CannedVegsBase">
-		<defName>PresVegsRaw</defName>
+		<defName>C81_PreservedVegsRaw</defName>
 		<label>Preserved vegetables</label>
 		<description>A steel can containing dried vegetables for cooking, seasoned for longer preservation.</description>
     
@@ -213,7 +213,7 @@ Bilanciare consumi
   
   
 <!-- Food canning benches -->  
-
+<!--
 	<ThingDef Name="C81_FoodBenchBase" ParentName="BenchBase" Abstract="True">
 		<thingClass>Building_WorkTable</thingClass>
 		<castEdgeShadows>true</castEdgeShadows>
@@ -227,7 +227,7 @@ Bilanciare consumi
 			<MaxHitPoints>180</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
-		<size>(3,1)</size>		<!-- FARE -->
+		<size>(3,1)</size>		
 		<designationCategory>Production</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
@@ -250,7 +250,7 @@ Bilanciare consumi
 		<label>Standard canning bench</label>
 		<description>A standard press optimized for food canning.</description>
 
-		<graphicData>		<!-- FARE -->
+		<graphicData>		
 			<texPath>Things/Building/Production/TableStoveFueled</texPath> 
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(3.5,1.5)</drawSize>
@@ -290,7 +290,7 @@ Bilanciare consumi
 		<label>Advanced canning and preservation bench</label>
 		<description>A standard press optimized and sterilized for long term food canning.</description>
 
-		<graphicData>		<!-- FARE -->
+		<graphicData>		
 			<texPath>Things/Building/Production/TableStoveFueled</texPath> 
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(3.5,1.5)</drawSize>
@@ -325,5 +325,6 @@ Bilanciare consumi
 			</li>
 		</comps>
 	</ThingDef>
-  
+-->
+
 </Defs>
