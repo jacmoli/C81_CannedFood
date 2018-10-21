@@ -232,6 +232,11 @@
 		<products>
 			<C81_CannedMeatRaw>1</C81_CannedMeatRaw>
 		</products>
+		
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+		
 	</RecipeDef>
 
 <!-- Canned meat x4 -->	
@@ -281,6 +286,10 @@
 		<products>
 			<C81_CannedMeatRaw>4</C81_CannedMeatRaw>
 		</products>
+		
+		<skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
 	</RecipeDef>	
 	
 	
@@ -329,6 +338,10 @@
 		<products>
 			<C81_CannedVegsRaw>1</C81_CannedVegsRaw>
 		</products>
+
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
 	</RecipeDef>
 
 <!-- Canned vegs x4 -->	
@@ -376,7 +389,11 @@
 		<products>
 			<C81_CannedVegsRaw>4</C81_CannedVegsRaw>
 		</products>
-	</RecipeDef>		
+
+		<skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
+		</RecipeDef>		
 
 
 	
@@ -427,6 +444,10 @@
 		<products>
 			<C81_PreservedMeatRaw>1</C81_PreservedMeatRaw>
 		</products>
+		
+		<skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
 	</RecipeDef>
 
 <!-- Preserved meat x4 -->	
@@ -476,6 +497,10 @@
 		<products>
 			<C81_PreservedMeatRaw>4</C81_PreservedMeatRaw>
 		</products>
+		
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
 	</RecipeDef>	
 	
 	
@@ -524,6 +549,10 @@
 		<products>
 			<C81_PreservedVegsRaw>1</C81_PreservedVegsRaw>
 		</products>
+		
+		<skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
 	</RecipeDef>
 
 <!-- Preserved vegs x4 -->	
@@ -571,6 +600,10 @@
 		<products>
 			<C81_PreservedVegsRaw>4</C81_PreservedVegsRaw>
 		</products>
+		
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
 	</RecipeDef>		
 	
 </Defs>  
