@@ -33,6 +33,8 @@ Bilanciare consumi
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
 	</ThingDef>
 
 	<ThingDef Name="C81_StdCan" ParentName="C81_Cans">
@@ -41,12 +43,12 @@ Bilanciare consumi
 		<description>An empty steel can ready to store ingredients.</description>
     
 		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>stdcanE_A</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>stdcanE</texPath>
 		</graphicData>
 
 		<statBases>
-			<MarketValue>1.0</MarketValue>
+			<MarketValue>0.5</MarketValue>
 		</statBases>	
 
 		<thingCategories>
@@ -61,12 +63,12 @@ Bilanciare consumi
 		<description>An empty steel can ready to store and long-term preserve ingredients.</description>
     
 		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>advcanE_A</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>advcanE</texPath>
 		</graphicData>
 
 		<statBases>
-			<MarketValue>1.5</MarketValue>
+			<MarketValue>1.0</MarketValue>
 		</statBases>
 
 		<thingCategories>
@@ -97,7 +99,7 @@ Bilanciare consumi
 			<Nutrition>0.25</Nutrition>
 			<Flammability>0.2</Flammability>
 			<DeteriorationRate>20</DeteriorationRate>
-			<Mass>0.1</Mass>
+			<Mass>0.3</Mass>
 			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
 		</statBases>
 		<ingestible>
@@ -144,8 +146,8 @@ Bilanciare consumi
 		<description>A steel can containing meat chops for cooking.</description>
     
 		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>stdcanM_A</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>stdcanM</texPath>
 		</graphicData>
 
 		<statBases>
@@ -165,8 +167,8 @@ Bilanciare consumi
 		<description>A steel can containing dried vegetables for cooking.</description>
     
 		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>stdcanV_A</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>stdcanV</texPath>
 		</graphicData>
 
 		<statBases>
@@ -187,8 +189,8 @@ Bilanciare consumi
 		<description>A steel can containing meat chops for cooking, seasoned for longer preservation.</description>
     
 		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>advcanM_A</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>advcanM</texPath>
 		</graphicData>
 
 		<statBases>
@@ -202,129 +204,13 @@ Bilanciare consumi
 		<description>A steel can containing dried vegetables for cooking, seasoned for longer preservation.</description>
     
 		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>advcanV_A</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>advcanV</texPath>
 		</graphicData>
 
 		<statBases>
 			<MarketValue>6.0</MarketValue>
 		</statBases>	
 	</ThingDef>  
-  
-  
-<!-- Food canning benches -->  
-<!--
-	<ThingDef Name="C81_FoodBenchBase" ParentName="BenchBase" Abstract="True">
-		<thingClass>Building_WorkTable</thingClass>
-		<castEdgeShadows>true</castEdgeShadows>
-		<staticSunShadowHeight>0.20</staticSunShadowHeight>
-		<constructEffect>ConstructMetal</constructEffect>
-		<altitudeLayer>Building</altitudeLayer>
-		<fillPercent>0.5</fillPercent>
-		<useHitPoints>True</useHitPoints>
-		<statBases>
-			<WorkToBuild>1000</WorkToBuild>
-			<MaxHitPoints>180</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-		</statBases>
-		<size>(3,1)</size>		
-		<designationCategory>Production</designationCategory>
-		<passability>PassThroughOnly</passability>
-		<pathCost>70</pathCost>
-		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-		<surfaceType>Item</surfaceType>
-		<inspectorTabs>
-			<li>ITab_Bills</li>
-		</inspectorTabs>
-		<building>
-			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-		</building>
-		<researchPrerequisites>
-			<li>C81_CanningTech</li>
-		</researchPrerequisites>
-	</ThingDef>
-  
-	<ThingDef Name="C81_StdCanningBench" ParentName="BenchBase">
-		<defName>C81_StdCanningBench</defName>
-		<label>Standard canning bench</label>
-		<description>A standard press optimized for food canning.</description>
-
-		<graphicData>		
-			<texPath>Things/Building/Production/TableStoveFueled</texPath> 
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3.5,1.5)</drawSize>
-			<damageData>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
-		</graphicData>
-		<costList>
-			<Steel>100</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-		</costList>
-		<recipes>
-			<li>C81_CanMeatX1</li>
-			<li>C81_CanMeatX4</li>
-			<li>C81_CanVegsX1</li>
-			<li>C81_CanVegsX4</li>
-		</recipes>
-		<comps>
-			<li Class="CompProperties_Refuelable">
-				<fuelConsumptionRate>160.0</fuelConsumptionRate>
-				<fuelCapacity>50.0</fuelCapacity>
-				<fuelFilter>
-					<thingDefs>
-						<li>C81_StdCan</li>
-					</thingDefs>
-				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-			</li>
-		</comps>
-	</ThingDef>
-  
-	<ThingDef Name="C81_AdvCanningBench" ParentName="BenchBase">
-		<defName>C81_AdvCanningBench</defName>
-		<label>Advanced canning and preservation bench</label>
-		<description>A standard press optimized and sterilized for long term food canning.</description>
-
-		<graphicData>		
-			<texPath>Things/Building/Production/TableStoveFueled</texPath> 
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3.5,1.5)</drawSize>
-			<damageData>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
-		</graphicData>
-		<costList>
-			<Steel>150</Steel>
-			<Silver>50</Silver>
-			<ComponentIndustrial>3</ComponentIndustrial>
-		</costList>
-		<recipes>
-			<li>C81_PresMeatX1</li>
-			<li>C81_PresMeatX4</li>
-			<li>C81_PresVegsX1</li>
-			<li>C81_PresVegsX4</li>
-		</recipes>
-		<comps>
-			<li Class="CompProperties_Refuelable">
-				<fuelConsumptionRate>160.0</fuelConsumptionRate>
-				<fuelCapacity>50.0</fuelCapacity>
-				<fuelFilter>
-					<thingDefs>
-						<li>C81_StdCan</li>
-					</thingDefs>
-				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-			</li>
-		</comps>
-	</ThingDef>
--->
 
 </Defs>

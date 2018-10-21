@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>  
-<!-- 
-
-- Cambiare tavolo (cooking)
-
-
-- Fare x1 / x4 preserved
-
-- Fare tutto per vegs
-
-- Fare ricetta per lattina e per lattina conservante
-
-
-
--->
 
 <!-- Common to all can-making -->
 	<RecipeDef Name="C81_MakeAllCans" Abstract="True">
@@ -202,7 +188,7 @@
 <!-- Canned meat x1 -->	
 	<RecipeDef ParentName="C81_CanningAll">
 		<defName>C81_CanMeatX1</defName>
-		<label>Can meat (can x1)</label>
+		<label>Can meat (1x can)</label>
 		<description>Clean some meat and store the good parts to cook them later.</description>
 		<jobString>Canning meat.</jobString>
 		<workAmount>160</workAmount>
@@ -231,13 +217,13 @@
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>5</count>
+				<count>6</count>
 			</li>
 			<li>
 				<filter>
-					<thingDef>
+					<thingDefs>
 						<li>C81_StdCan</li>
-					</thingDef>
+					</thingDefs>
 				</filter>
 				<count>1</count>
 			</li>
@@ -251,7 +237,7 @@
 <!-- Canned meat x4 -->	
 	<RecipeDef ParentName="C81_CanningAll">
 		<defName>C81_CanMeatX4</defName>
-		<label>Can meat (cans x4)</label>
+		<label>Can meat (4x cans)</label>
 		<description>Clean some meat and store the good parts to cook them later.</description>
 		<jobString>Canning meat.</jobString>
 		<workAmount>640</workAmount>
@@ -280,13 +266,13 @@
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>20</count>
+				<count>24</count>
 			</li>
 			<li>
 				<filter>
-					<thingDef>
+					<thingDefs>
 						<li>C81_StdCan</li>
-					</thingDef>
+					</thingDefs>
 				</filter>
 				<count>4</count>
 			</li>
@@ -301,7 +287,7 @@
 <!-- Canned vegs x1 -->	
 	<RecipeDef ParentName="C81_CanningAll">
 		<defName>C81_CanVegsX1</defName>
-		<label>Can vegetables (can x1)</label>
+		<label>Can vegetables (1x can)</label>
 		<description>Clean some vegetables and store the good parts to cook them later.</description>
 		<jobString>Canning vegetables.</jobString>
 		<workAmount>160</workAmount>
@@ -328,13 +314,13 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>5</count>
+				<count>6</count>
 			</li>
 			<li>
 				<filter>
-					<thingDef>
+					<thingDefs>
 						<li>C81_StdCan</li>
-					</thingDef>
+					</thingDefs>
 				</filter>
 				<count>1</count>
 			</li>
@@ -348,7 +334,7 @@
 <!-- Canned vegs x4 -->	
 	<RecipeDef ParentName="C81_CanningAll">
 		<defName>C81_CanVegsX4</defName>
-		<label>Can vegetables (cans x4)</label>
+		<label>Can vegetables (4x cans)</label>
 		<description>Clean some vegetables and store the good parts to cook them later.</description>
 		<jobString>Canning vegetables.</jobString>
 		<workAmount>640</workAmount>
@@ -375,13 +361,13 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>20</count>
+				<count>24</count>
 			</li>
 			<li>
 				<filter>
-					<thingDef>
+					<thingDefs>
 						<li>C81_StdCan</li>
-					</thingDef>
+					</thingDefs>
 				</filter>
 				<count>4</count>
 			</li>
@@ -397,7 +383,7 @@
 <!-- Preserved meat x1 -->	
 	<RecipeDef ParentName="C81_CanningAll">
 		<defName>C81_PreserveMeatX1</defName>
-		<label>Preserve meat (can x1)</label>
+		<label>Preserve meat (1x can)</label>
 		<description>Clean some meat, season it and store the good parts in a sterile can to cook them later.</description>
 		<jobString>Preserving meat.</jobString>
 		<workAmount>240</workAmount>
@@ -426,13 +412,13 @@
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>5</count>
+				<count>6</count>
 			</li>
 			<li>
 				<filter>
-					<thingDef>
+					<thingDefs>
 						<li>C81_AdvCan</li>
-					</thingDef>
+					</thingDefs>
 				</filter>
 				<count>1</count>
 			</li>
@@ -446,7 +432,7 @@
 <!-- Preserved meat x4 -->	
 	<RecipeDef ParentName="C81_CanningAll">
 		<defName>C81_PreserveMeatX4</defName>
-		<label>Preserve meat (cans x4)</label>
+		<label>Preserve meat (4x cans)</label>
 		<description>Clean some meat, season it and store the good parts in a sterile can to cook them later.</description>
 		<jobString>Preserving meat.</jobString>
 		<workAmount>960</workAmount>
@@ -475,13 +461,13 @@
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>20</count>
+				<count>24</count>
 			</li>
 			<li>
 				<filter>
-					<thingDef>
+					<thingDefs>
 						<li>C81_AdvCan</li>
-					</thingDef>
+					</thingDefs>
 				</filter>
 				<count>4</count>
 			</li>
@@ -496,7 +482,7 @@
 <!-- Preserved vegs x1 -->	
 	<RecipeDef ParentName="C81_CanningAll">
 		<defName>C81_PreserveVegsX1</defName>
-		<label>Can vegetables (can x1)</label>
+		<label>Preserve vegetables (1x can)</label>
 		<description>Clean some vegetables, season them and store the good parts in a sterile can to cook them later.</description>
 		<jobString>Canning vegetables.</jobString>
 		<workAmount>240</workAmount>
@@ -523,13 +509,13 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>5</count>
+				<count>6</count>
 			</li>
 			<li>
 				<filter>
-					<thingDef>
+					<thingDefs>
 						<li>C81_AdvCan</li>
-					</thingDef>
+					</thingDefs>
 				</filter>
 				<count>1</count>
 			</li>
@@ -543,7 +529,7 @@
 <!-- Preserved vegs x4 -->	
 	<RecipeDef ParentName="C81_CanningAll">
 		<defName>C81_PreserveVegsX4</defName>
-		<label>Can vegetables (can x4)</label>
+		<label>Preserve vegetables (4x can)</label>
 		<description>Clean some vegetables, season them and store the good parts in a sterile can to cook them later.</description>
 		<jobString>Canning vegetables.</jobString>
 		<workAmount>960</workAmount>
@@ -570,13 +556,13 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>20</count>
+				<count>24</count>
 			</li>
 			<li>
 				<filter>
-					<thingDef>
+					<thingDefs>
 						<li>C81_AdvCan</li>
-					</thingDef>
+					</thingDefs>
 				</filter>
 				<count>4</count>
 			</li>
@@ -587,9 +573,4 @@
 		</products>
 	</RecipeDef>		
 	
-  
-  
-  
-  
-  
 </Defs>  
