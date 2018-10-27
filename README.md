@@ -1,11 +1,13 @@
 # [C81] Canned Food
-## A Rimworld v1.0 mod
+## A Rimworld v1.0 mod by Cocco81
+
+Current mod version: v1.0
 
 ### Mod description
 
 This mod has the aim to help save fridge space in late game when food supplies may be huge.
 
-The mod is XML only and adds the following items and relevant recipes (single and bulk versions):
+The mod is currently XML only and adds the following items and relevant recipes (single and bulk versions):
 
 - Steel can (standard)
 
@@ -23,11 +25,12 @@ The mod is XML only and adds the following items and relevant recipes (single an
 
 - [Canned / Preserved] [Meat / Vegetables]
 
-  *1x [normal / advanced] can + 6x  food ingredients = 1x [Canned / Preserved] food ingredients*  
-  *4x [normal / advanced] can + 24x food ingredients = 4x [Canned / Preserved] food ingredients*  
+  *1x [normal / advanced] can + 6x  [meat / vegs] = 1x [Canned / Preserved] [meat / vegs]*  
+  *4x [normal / advanced] can + 24x [meat / vegs] = 4x [Canned / Preserved] [meat / vegs]*  
   
   Each can of food ingredients is equivalent to 5 vegs/meat items (i.e. half the dose required for a simple meal, or enough for a fine meal taking one of each type).  
-  Canning food requires the appropriate can and **6 (six)** ingredients, as the space saving is achieved by tasking only the useful parts from food. Shelf life is 30 days for canned meat and 60 days for canned vegetables. Preserved ingredients never rot.
+  Different types of meat or vegetables *can* be mixed.  
+  Canning food requires the appropriate can and **6 (six)** ingredients, as the space saving is achieved by taking only the best parts from food. Shelf life is 30 days for canned meat and 60 days for canned vegetables. Preserved ingredients never rot.
 
 NOTE: cans (any type, empty or full) stack up to 150. Meaning that in the end space efficiency is 10x base game's (5x nutrition content per item, 2x stack size per tile). 
   
@@ -54,10 +57,11 @@ Preserved food (1x) : cooking  10
 ### Warnings, compatibility etc.
 
 - Mod should be compatible with other mods, even those with similar functions.
-- Mod probably can **not** be removed from a savegame. Maybe it can if all cans, canned food and canning bills are removed, but it will require testing. I'll let you know ASAP.
-- Human and inscet meats are disabled from the meat canning recipes, as a mixed meat can would either lose the cannibalistic debuff or it would apply the debuff to all meat int he can (increasing food availability for cannibals).
-- If any mod introduces food which is **more** nutrient than vanilla meat or vegetables, it is advisable to disallow these foods form ingredients, or their extra nutrition will be lost (5 items will always be required).
-- If any mod introduces food which is **less** nutrient than vanilla meat or vegetables, it is advisable to disallow these foods form ingredients, as the canning process would create nutrition from scratch (see "cheating").
+- Mod can be safely added mid-game.
+- Mod probably can **not** be removed from a savegame. Maybe it can if all empty cans, canned food and canning bills (production and cooking) are removed, but it will require testing. I'll let you know ASAP.
+- Human and insect meats are disabled from the meat canning recipes, as a mixed meat can would either lose the cannibalistic debuff or it would apply the debuff to all meat in the can (increasing food availability for cannibals).
+- If any mod introduces food which is **more** nutritious than vanilla meat or vegetables, it is advisable to disallow these foods from ingredients, or their extra nutrition will be lost (5 items will always be required).
+- If any mod introduces food which is **less** nutritious than vanilla meat or vegetables, it is advisable to disallow these foods from ingredients, as the canning process would create nutrition from scratch (see "cheating").
 
 ### Future developments (fellow modders help is welcome)
 
@@ -67,3 +71,20 @@ Preserved food (1x) : cooking  10
 - LP: Better artworks for cans
 - HP: Modify C# code to have a *IngredientValueGetter* returning nutrition (if defined for ingredient) or else item count (as for non-meal recipes)
 - VLP: Evaluate behaviour of using part normal meat, part human meat.
+
+### License and misc
+
+See license on https://github.com/jacmoli/C81_CannedFood  
+(in short, it's MIT License).
+
+Feel free to use this mod and do whatever you want with it, I only ask you to be kind enough to do the following:  
+- tell me if you are borrowing code or incorporating it;
+- give credit;
+- please do not publish patches, improvements, balances etc. without even trying to reach me with a message or a pull request.
+
+### Main versions history
+
+Note: older versions can be found in the *Releases* folder on GitHub
+
+**v1.0** : first release version.
+
