@@ -9,24 +9,24 @@ The mod is XML only and adds the following items and relevant recipes (single an
 
 - Steel can (standard)
 
-  *1x steel -> 5x  cans*
-  *4x steel -> 20x cans*
+  *1x steel -> 5x  cans*  
+  *4x steel -> 20x cans*  
   
   Each can can store and extend life of 5x meat items or 5x vegetable items. 
     
 - Steel can (advanced)
 
-  *1x steel + 1x psychoid leaves -> 5x  advanced cans*
-  *4x steel + 4x psychoid leaves -> 20x advanced cans*
+  *1x steel + 1x psychoid leaves -> 5x  advanced cans*  
+  *4x steel + 4x psychoid leaves -> 20x advanced cans*  
   
   Each advanced can can store and preserve (fully prevents rotting) 5x meat items or 5x vegetable items. 
 
 - [Canned / Preserved] [Meat / Vegetables]
 
-  *1x [normal / advanced] can + 6x  food ingredients = 1x [Canned / Preserved] food ingredients*
-  *4x [normal / advanced] can + 24x food ingredients = 4x [Canned / Preserved] food ingredients*
+  *1x [normal / advanced] can + 6x  food ingredients = 1x [Canned / Preserved] food ingredients*  
+  *4x [normal / advanced] can + 24x food ingredients = 4x [Canned / Preserved] food ingredients*  
   
-  Each can of food ingredients is equivalent to 5 vegs/meat items (i.e. half the dose required for a simple meal, or enough for a fine meal taking one of each type).
+  Each can of food ingredients is equivalent to 5 vegs/meat items (i.e. half the dose required for a simple meal, or enough for a fine meal taking one of each type).  
   Canning food requires the appropriate can and **6 (six)** ingredients, as the space saving is achieved by tasking only the useful parts from food. Shelf life is 30 days for canned meat and 60 days for canned vegetables. Preserved ingredients never rot.
 
 NOTE: cans (any type, empty or full) stack up to 150. Meaning that in the end space efficiency is 10x base game's (5x nutrition content per item, 2x stack size per tile). 
@@ -36,16 +36,20 @@ NOTE: cans (any type, empty or full) stack up to 150. Meaning that in the end sp
 Crafting items requires some skill:
 
 **Machining table recipes**
-    Standard cans (1x)  : crafting  6
-    Standard cans (4x)  : crafting  8
-    Advanced cans (1x)  : crafting  8
-    Advanced cans (4x)  : crafting 10
+```
+Standard cans (1x)  : crafting  6
+Standard cans (4x)  : crafting  8
+Advanced cans (1x)  : crafting  8
+Advanced cans (4x)  : crafting 10
+```
 
 **Stove recipes**
-    Canned food (1x)    : cooking   6
-    Canned food (4x)    : cooking   8
-    Preserved food (1x) : cooking   8
-    Preserved food (1x) : cooking  10
+```
+Canned food (1x)    : cooking   6
+Canned food (4x)    : cooking   8
+Preserved food (1x) : cooking   8
+Preserved food (1x) : cooking  10
+```
 
 ### Warnings, compatibility etc.
 
@@ -57,7 +61,7 @@ Crafting items requires some skill:
 
 ### Future developments (fellow modders help is welcome)
 
-(V)HP = (very) high priority
+(V)HP = (very) high priority  
 (V)LP = (very) low priority
 
 - LP: Better artworks for cans
