@@ -82,6 +82,9 @@ Feel free to use this mod and do whatever you want with it, I only ask you to be
 - give credit;
 - please do not publish patches, improvements, balances etc. without even trying to reach me with a message or a pull request.
 
+If you want to support me feel free to do so here:
+https://ko-fi.com/jacmoli
+
 ### Main versions history
 
 Note: older versions can be found in the *Releases* folder on GitHub
