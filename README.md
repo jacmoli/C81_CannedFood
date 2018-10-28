@@ -7,7 +7,7 @@ Current mod version: v1.0
 
 This mod has the aim to help save fridge space in late game when food supplies may be huge.
 
-The mod is currently XML only and adds the following items and relevant recipes (single and bulk versions):
+The mod is currently XML only and adds the following items and relevant recipes (single and bulk versions) after researching the **Food Canning** tech (requires Packaged Survival Meal):
 
 - Steel can (standard)
 
