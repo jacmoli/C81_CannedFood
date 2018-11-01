@@ -180,7 +180,8 @@
 		<recipeUsers>
 			<li>FueledStove</li>
 			<li>ElectricStove</li>
-		</recipeUsers>		
+		</recipeUsers>	
+		<researchPrerequisite>C81_CanningTech</researchPrerequisite>		
 	</RecipeDef>
 
 

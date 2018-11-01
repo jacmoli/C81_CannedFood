@@ -1,7 +1,7 @@
 # [C81] Canned Food
 ## A Rimworld v1.0 mod by Cocco81
 
-Current mod version: v1.0
+Current mod version: v1.0.1
 
 ### Mod description
 
@@ -87,7 +87,8 @@ https://ko-fi.com/jacmoli
 
 ### Main versions history
 
-Note: older versions can be found in the *Releases* folder on GitHub
+Note: older versions can be found in the *Releases* section on GitHub
 
-**v1.0** : first release version.
+**v1.0.0** : first release version.
+**v1.0.1** : fixed missing research prerequisite on stoves bills.
 
