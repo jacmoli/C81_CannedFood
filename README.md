@@ -91,4 +91,5 @@ Note: older versions can be found in the *Releases* section on GitHub
 
 **v1.0.0** : first release version.
 **v1.0.1** : fixed missing research prerequisite on stoves bills.
+**v1.1.0** : updated for RW 1.1 
 

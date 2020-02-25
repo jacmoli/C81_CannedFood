@@ -4,7 +4,7 @@
 <!-- Common to all can-making -->
 	<RecipeDef Name="C81_MakeAllCans" Abstract="True">
 		<jobString>Making cans.</jobString>
-		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
 		<workSkill>Crafting</workSkill>

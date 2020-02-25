@@ -2,7 +2,11 @@
 <ModMetaData>
 	<name>[C81] Canned food</name>
 	<author>Cocco81</author>
-	<targetVersion>1.0.0</targetVersion>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+	</supportedVersions>
+	<packageId>cocco81.cannedFood</packageId>
 	<description>Mod v1.0.1
     This mod adds canned food, obtained by building steel cans and pressing food in them for longer preservation.
 	</description>
