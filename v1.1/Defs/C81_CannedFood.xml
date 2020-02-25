@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- 
+Fare tutta la parte dei tavoli, grafica, dimensioni ecc
+Capire offset interaction cell
+Bilanciare consumi
+-->
+
+
+<!-- Standard cans and advanced (preserving) cans -->
+	<ThingDef Name="C81_Cans" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<tickerType>Rare</tickerType>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>150</stackLimit>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<socialPropernessMatters>true</socialPropernessMatters>  
+		<statBases>
+			<Beauty>-4</Beauty>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<DeteriorationRate>20</DeteriorationRate>
+			<Mass>0.1</Mass>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+	</ThingDef>
+
+	<ThingDef Name="C81_StdCan" ParentName="C81_Cans">
+		<defName>C81_StdCan</defName>
+		<label>Standard steel can</label>
+		<description>An empty steel can ready to store ingredients.</description>
+    
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>stdcanE</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>0.5</MarketValue>
+		</statBases>	
+
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+
+	</ThingDef>
+
+	<ThingDef Name="C81_AdvCan" ParentName="C81_Cans">
+		<defName>C81_AdvCan</defName>
+		<label>Advanced steel can</label>
+		<description>An empty steel can ready to store and long-term preserve ingredients.</description>
+    
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>advcanE</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>1.0</MarketValue>
+		</statBases>
+
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>		
+		
+	</ThingDef>
+
+	
+<!-- Basic canned food definition (HP, stacks, nutrition etc) -->
+	<ThingDef Name="C81_CannedFood" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<tickerType>Rare</tickerType>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>150</stackLimit>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<socialPropernessMatters>true</socialPropernessMatters>  
+		<statBases>
+			<Beauty>-4</Beauty>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Nutrition>0.25</Nutrition>
+			<Flammability>0.2</Flammability>
+			<DeteriorationRate>20</DeteriorationRate>
+			<Mass>0.3</Mass>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<tasteThought>AteRawFood</tasteThought>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_FoodPoisonable" />
+		</comps>
+	</ThingDef>
+
+
+<!-- Canned food definitions by type (is it meat or vegs?) -->
+	<ThingDef Name="C81_CannedMeatBase" ParentName="C81_CannedFood" Abstract="True">
+		<ingestible>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
+			<foodType>Meat</foodType>
+		</ingestible>
+	
+		<thingCategories>
+			<li>MeatRaw</li>
+		</thingCategories>  
+	</ThingDef>
+
+	<ThingDef Name="C81_CannedVegsBase" ParentName="C81_CannedFood" Abstract="True">
+		<ingestible>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>RawVegetable_Eat</ingestSound>
+			<foodType>VegetableOrFruit</foodType>
+		</ingestible>
+	
+		<thingCategories>
+			<li>PlantFoodRaw</li>
+		</thingCategories>  
+	</ThingDef>
+
+
+<!-- Canned food items (name, desc, value, rotting time, graphics) -->	
+	<ThingDef Name="C81_CannedMeatRaw" ParentName="C81_CannedMeatBase">
+		<defName>C81_CannedMeatRaw</defName>
+		<label>Canned meat</label>
+		<description>A steel can containing meat chops for cooking.</description>
+    
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>stdcanM</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>8.0</MarketValue>
+		</statBases>	
+		
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef Name="C81_CannedVegsRaw" ParentName="C81_CannedVegsBase">
+		<defName>C81_CannedVegsRaw</defName>
+		<label>Canned vegetables</label>
+		<description>A steel can containing dried vegetables for cooking.</description>
+    
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>stdcanV</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>4.0</MarketValue>
+		</statBases>	
+		
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+			</li>
+		</comps>
+	</ThingDef>  
+
+	
+	<ThingDef Name="C81_PreservedMeatRaw" ParentName="C81_CannedMeatBase">
+		<defName>C81_PreservedMeatRaw</defName>
+		<label>Preserved meat</label>
+		<description>A steel can containing meat chops for cooking, seasoned for longer preservation.</description>
+    
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>advcanM</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>12.0</MarketValue>
+		</statBases>	
+	</ThingDef>
+
+	<ThingDef Name="C81_PreservedVegsRaw" ParentName="C81_CannedVegsBase">
+		<defName>C81_PreservedVegsRaw</defName>
+		<label>Preserved vegetables</label>
+		<description>A steel can containing dried vegetables for cooking, seasoned for longer preservation.</description>
+    
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>advcanV</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>6.0</MarketValue>
+		</statBases>	
+	</ThingDef>  
+
+</Defs>
